@@ -13,5 +13,4 @@ const elementsToDuplicateText = [...document.querySelectorAll('.text-dup')];
 document.querySelector('.text-source').oninput = (evt) => {
     const { value } = evt.target;
     elementsToDuplicateText.forEach(elem => elem.innerText = value);
-    
 };
