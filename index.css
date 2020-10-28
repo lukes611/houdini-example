@@ -1,0 +1,40 @@
+body {
+    display: grid;
+    grid-auto-flow: row;
+    grid-gap: 16px;
+}
+
+.regular-underline {
+    text-decoration: underline;
+    text-decoration-color: #FFAEBC;
+}
+
+.wavy-underline {
+    text-decoration: underline;
+    text-decoration-color: #FFAEBC;
+    text-decoration-style: wavy;
+}
+
+.cool-underline, .animated-cool-underline {
+    --underlineColor1: #FFAEBC;
+    --underlineColor2: #A0E7E5;
+    --waveTime: 0;
+    background-image: paint(WaveUnderline);
+}
+
+.animated-cool-underline {
+    animation-name: animated-cool-underline-anim;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: absolute;
+}
+
+@keyframes animated-cool-underline-anim {
+    from {
+        --waveTime: 0;
+    }
+    to {
+        --waveTime: 1;
+    }
+}
