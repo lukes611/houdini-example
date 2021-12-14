@@ -6,8 +6,6 @@ CSS.registerProperty({
   });
 CSS.paintWorklet.addModule('css-worklet.js');
 
-
-
 const elementsToDuplicateText = [...document.querySelectorAll('.text-dup')];
 // duplicate text
 document.querySelector('.text-source').oninput = (evt) => {
